@@ -10,6 +10,15 @@ c_choices = (
 
 
 class AbcModel(models.Model):
+
+    
+    student = models.CharField(
+        verbose_name="Фамилия студента",
+        default="Иванов",
+        max_length=255,
+    )
+       
+
     task = models.CharField(
         verbose_name="Формулировка  задачи",
         default="Равна ли С сумме A и B ?",
@@ -35,7 +44,7 @@ class AbcModel(models.Model):
     current_date = models.DateTimeField(
         verbose_name="Дата изменения(save)", auto_now=True
     )
-
+    
     def __str__(self):
         # return self.task
         # return '%s %s' % (self.task, self.current_date)
