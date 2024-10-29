@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block title %} form_abc_app/form_create_0 {% endblock %}
+
+{% block content %}
+    <h5>abc_app:abc_model_form</h5>
+    <form action= "{% url 'abc_app:abc_model_form' %}"" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <label for="id_submit">&nbsp;</label>
+        <button type="submit" id="id_submit">Отправить</button>
+        </label>
+    </form>
+{% endblock %}
