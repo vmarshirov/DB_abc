@@ -10,26 +10,23 @@ c_choices = (
 
 
 class AbcModel(models.Model):
-
-    
+   
     student = models.CharField(
         verbose_name="Фамилия студента",
         default="Иванов",
         max_length=255,
     )
-       
-
+    
     task = models.CharField(
         verbose_name="Формулировка  задачи",
         default="Равна ли С сумме A и B ?",
         max_length=255,
     )
     a = models.IntegerField(
-        verbose_name="Значение А",
-        default=0,
-    )
+        verbose_name="Значение А", default=2, help_text="Подсказка для значения А",
+    ) 
     b = models.IntegerField(
-        verbose_name="Значение B", default=2, help_text="Подсказка для значения B"
+        verbose_name="Значение B", default=3, help_text="Подсказка для значения B",
     )
     c = models.IntegerField(
         verbose_name="Значение С",
@@ -37,7 +34,6 @@ class AbcModel(models.Model):
         default=10,
     )
     result = models.CharField(
-        verbose_name="Результат",
         default="Результат не определен",
         max_length=255,
     )
@@ -53,7 +49,7 @@ class AbcModel(models.Model):
     class Meta:
         verbose_name = "A_B_C_Таблица"
         verbose_name_plural = "A_B_C_Таблицы"
-        ordering = ("-pk", )
+        ordering = ("student", )
 
 
 # current_date = models.DateTimeField("ДатаВремя", default=datetime.datetime.now())
