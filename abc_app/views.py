@@ -78,7 +78,7 @@ def table(request):
     print("\nobjects_values:", objects_values)
     # values_list
     objects_values_list = (
-        AbcModel.objects.values_list().filter(id__gte=2).order_by("-id")
+        AbcModel.objects.values_list().filter(id__gte=7).order_by("student")
     )  # [0:3]
     print("\nobjects_values_list:", objects_values_list)
     cur_objects = objects_values_list
