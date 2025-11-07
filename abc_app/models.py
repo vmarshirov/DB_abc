@@ -19,7 +19,7 @@ class AbcModel(models.Model):
     
     task = models.CharField(
         verbose_name="Формулировка  задачи",
-        default="Равна ли С сумме A и B ?",
+        default="Равна ли С сумме A и B ??",
         max_length=255,
     )
     a = models.IntegerField(
