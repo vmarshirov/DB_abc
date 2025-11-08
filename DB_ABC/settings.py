@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'abc_app.apps.AbcAppConfig',
+    'businessApp.apps.BusinessappConfig',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,14 @@
+{% extends 'b_layout.html' %}
+
+{% block title %} form {% endblock %}
+
+{% block content %}
+    <h5>form</h5>
+    <form action= "{% url 'businessApp:form' %}"" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <label for="id_submit">&nbsp;</label>
+        <button type="submit" id="id_submit">Отправить</button>
+        </label>
+    </form>
+{% endblock %}
