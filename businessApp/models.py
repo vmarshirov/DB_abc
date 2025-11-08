@@ -15,33 +15,32 @@ class businessApp(models.Model):
         )
 
     r_price=models.IntegerField(
-        verbose_name="цена ресурса", default=0,
+        verbose_name="Цена ресурса", default=0,
         )
     
     s_name= models.CharField(
-        verbose_name="Название ресурса",
+        verbose_name="Название товара",
         default="",
         max_length=255,
     )
 
     s_amount=models.IntegerField(
-        verbose_name="Количество ресурса", default=0,
+        verbose_name="Количество товара", default=0,
         )
 
     s_price=models.IntegerField(
-        verbose_name="цена ресурса", default=0,
+        verbose_name="Цена товара", default=0,
         )
     current_date = models.DateTimeField(
         verbose_name="Дата изменения(save)", auto_now=True
     )
 
 
-    ''' 
     def __str__(self):
         # return self.task
         # return '%s %s' % (self.task, self.current_date)
-        return f"self.id:{self.id}; self.task:{self.task}"
-'''
+        return f"self.id:{self.id}; self.r_name:{self.r_name}; self.s_name:{self.s_name}"
+
     class Meta:
         verbose_name = "Таблица"
         verbose_name_plural = "Таблицы"

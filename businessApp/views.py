@@ -45,8 +45,23 @@ def table(request):
     print("\nresult", result)
 
 
+
+    # fields_name
+    fields = businessApp._meta.get_fields()
+    print("\nfields", fields)
+    verbose_name_list = []
+    name_list = []
+    for e in fields:
+        verbose_name_list.append(e.verbose_name)
+        name_list.append(e.name)
+
+    print ("\n\nname_list", name_list)
+    print ("\n\nverbose_ name_list", verbose_name_list)
+
     context = {
+        "verbose_name_list": verbose_name_list,
         "objects_values": objects_values,
+        "result": result,
     }
 
     return render(request, "b_table.html", context)
