@@ -24,9 +24,16 @@ def form(request):
 
 
 
-def solution(objects_values_list):
-    print("\nobjects_values_list:", objects_values_list)
-    result = "С не равна сумме A и B"
+def solution(objects_values):
+    print("\nobjects_values:\n", objects_values)
+    result = 0. 
+    r_cost = 0.
+    s_cost = 0.
+    for values in objects_values:
+        r_cost = r_cost + values.get("r_amount")*values.get("r_price")
+        s_cost = s_cost + values.get("s_amount")*values.get("s_price")
+    print ("\n\n", r_cost, s_cost) 
+    result = s_cost - r_cost
     return result
 
 
@@ -38,10 +45,10 @@ def table(request):
     objects_values = businessApp.objects.values()
     print("\nobjects_values:", objects_values)
 
-    objects_values_list = businessApp.objects.values_list()
+    objects_values_list = businessApp.objects.values()
     print("\nobjects_values_list:", objects_values_list)    
 
-    result = solution(objects_values_list)
+    result = solution(objects_values)
     print("\nresult", result)
 
 

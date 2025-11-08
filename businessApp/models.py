@@ -6,7 +6,7 @@ class businessApp(models.Model):
    
     r_name= models.CharField(
         verbose_name="Название ресурса",
-        default="",
+        default="отсутствует",
         max_length=255,
     )
 
@@ -14,13 +14,13 @@ class businessApp(models.Model):
         verbose_name="Количество ресурса", default=0,
         )
 
-    r_price=models.IntegerField(
+    r_price=models.FloatField(
         verbose_name="Цена ресурса", default=0,
         )
     
     s_name= models.CharField(
         verbose_name="Название товара",
-        default="",
+        default="отсутствует",
         max_length=255,
     )
 
@@ -28,7 +28,7 @@ class businessApp(models.Model):
         verbose_name="Количество товара", default=0,
         )
 
-    s_price=models.IntegerField(
+    s_price=models.FloatField(
         verbose_name="Цена товара", default=0,
         )
     current_date = models.DateTimeField(
