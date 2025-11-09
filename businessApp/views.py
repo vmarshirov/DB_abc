@@ -43,6 +43,7 @@ def table(request):
     # all.delete()
     # objects_list
     objects_values = businessApp.objects.values()
+    objects_values = businessApp.objects.values().order_by("-id")[0:1]
     print("\nobjects_values:", objects_values)
 
     objects_values_list = businessApp.objects.values()

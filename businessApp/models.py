@@ -32,7 +32,7 @@ class businessApp(models.Model):
         verbose_name="Цена товара", default=0,
         )
     current_date = models.DateTimeField(
-        verbose_name="Дата изменения(save)", auto_now=True
+        verbose_name="Дата изменения (save)", auto_now=True
     )
 
 
