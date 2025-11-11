@@ -1,6 +1,7 @@
-### !!! utf-8
 
-### su
+#### Внимание
+Перед начало установки Django необходимо переустановить Pytnon по рекомендациям в https://github.com/vmarshirov/WebApplicationsDevelopment/tree/main/files
+
 
 apt install python3-venv
 
