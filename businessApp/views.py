@@ -32,7 +32,7 @@ def solution(objects_values):
     for values in objects_values:
         r_cost = r_cost + values.get("r_amount")*values.get("r_price")
         s_cost = s_cost + values.get("s_amount")*values.get("s_price")
-    print ("\n\n", r_cost, s_cost) 
+    print ("\n\n r_cost, s_cost", r_cost, s_cost) 
     result = s_cost - r_cost
     return result
 
@@ -43,7 +43,7 @@ def table(request):
     # all.delete()
     # objects_list
     objects_values = businessApp.objects.values()
-    objects_values = businessApp.objects.values().order_by("-id")[0:1]
+    objects_values = businessApp.objects.values().order_by("-id")[0:100]
     print("\nobjects_values:", objects_values)
 
     objects_values_list = businessApp.objects.values()

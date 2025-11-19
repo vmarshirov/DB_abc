@@ -4,9 +4,9 @@
 
 label{
     display: table-row;
-    line-height: 2.0rem;
+    margin-top: 40px;
 }
 
 input {
-    width: fit-content;
+    width:max-content;
 }

@@ -31,6 +31,7 @@ class businessApp(models.Model):
     s_price=models.FloatField(
         verbose_name="Цена товара", default=0,
         )
+    
     current_date = models.DateTimeField(
         verbose_name="Дата изменения (save)", auto_now=True
     )
@@ -42,7 +43,7 @@ class businessApp(models.Model):
         return f"self.id:{self.id}; self.r_name:{self.r_name}; self.s_name:{self.s_name}"
 
     class Meta:
-        verbose_name = "Таблица"
+        verbose_name = "Запись"
         verbose_name_plural = "Таблицы"
         ordering = ("id", )
  
