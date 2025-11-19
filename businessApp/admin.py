@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import businessApp
 
+
 # Register your models here.
 admin.site.register(businessApp)
 # @admin.register(Abc)
